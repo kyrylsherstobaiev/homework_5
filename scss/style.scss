@@ -1,0 +1,63 @@
+@import "_fonts.scss";
+
+$backgroundTable: #55aa55;
+$fontColor: #353c4d;
+
+* {
+	box-sizing: border-box;
+	font-family: 'Nerko One', cursive;
+}
+
+img {
+	padding: 0;
+}
+
+span {
+	margin-right: 2px;
+}
+
+.picture_card {
+	width: 80px;
+	margin: 0 auto;
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: repeat(8, 120px);
+	justify-items: center;
+	justify-content: center;
+	grid-gap: 10px;
+	padding: 10px;
+	width: 1050px;
+	color: $fontColor;
+	background-color: $backgroundTable;
+	margin: 20px auto;
+
+	//*flexbox the second method
+	//display: flex;
+	//flex-wrap: wrap;
+	//justify-content: center;
+}
+
+.card {
+	padding: 10px;
+	min-width: 120px;
+	height: 190px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: white;
+	border-radius: 10px;
+	-webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+	-moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+	box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+	div {
+		display: flex;
+		align-items: center;
+	}
+	div {
+		&:nth-child(3) {
+			justify-content: flex-end;
+		}
+	}
+}
