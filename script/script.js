@@ -1,4 +1,4 @@
-let arrayCardSuitNumber = ["./img/clubs.svg", "./img/spades.svg", "./img/diamonds.svg", "./img/hearts.svg"];
+let arrayCardSuit = ["./img/clubs.svg", "./img/spades.svg", "./img/diamonds.svg", "./img/hearts.svg"];
 let arrayCardSuitPict = ["J", "D", "K"];
 let arrayFigure = ["./img/jack.svg", "./img/queen.svg", "./img/king.svg"];
 let arrayCardDeck = [];
@@ -13,27 +13,27 @@ function writeCard(elem1, elem2, elem3) {
 }
 
 for (let i = 2; i <= 10; i++) {
-	for (let j = 0; j < arrayCardSuitNumber.length; j++) {
+	for (let j = 0; j < arrayCardSuit.length; j++) {
 		let first = (`<span style="font-size:25px">${i}</span>`);
-		let second = (`<img src="${arrayCardSuitNumber[j]}"  height="15"/>`);
+		let second = (`<img src="${arrayCardSuit[j]}"  height="15"/>`);
 		let middle = ('');
 		writeCard(first, second, middle);
 	}
 }
 
 for (let i = 0; i < arrayCardSuitPict.length; i++) {
-	for (j = 0; j < arrayCardSuitNumber.length; j++) {
+	for (j = 0; j < arrayCardSuit.length; j++) {
 		let first = (`<span style="font-size:25px">${arrayCardSuitPict[i]}</span>`);
-		let second = (`<img src="${arrayCardSuitNumber[j]}"  height="15"/>`);
+		let second = (`<img src="${arrayCardSuit[j]}"  height="15"/>`);
 		let middle = (`<img class="picture_card" src="${arrayFigure[i]}"/>`)
 		writeCard(first, second, middle);
 	}
 }
 
-for (let i = 0; i < arrayCardSuitNumber.length; i++) {
+for (let i = 0; i < arrayCardSuit.length; i++) {
 	let first = (`<span style="font-size:25px">T</span>`);
-	let second = (`<img src="${arrayCardSuitNumber[i]}"  height="15"/>`)
-	let middle = (`<img class="picture_card" src="${arrayCardSuitNumber[i]}"/>`);
+	let second = (`<img src="${arrayCardSuit[i]}"  height="15"/>`)
+	let middle = (`<img class="picture_card" src="${arrayCardSuit[i]}"/>`);
 	writeCard(first, second, middle);
 }
 
